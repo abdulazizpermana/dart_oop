@@ -19,6 +19,13 @@ class Person{
   }
 }
 
+//extension method
+extension SayGoodBye on Person{
+  void sayGoodBye(String paramName){
+    print('Goog bye $paramName, from $name');
+  }
+}
+
 void main(){
   var person1 = Person();
   person1.name = 'Abdul Aziz Permana';
@@ -31,6 +38,7 @@ void main(){
   print(person1.address);
   print(person1.country);
   // print(person2);
+  person1.sayGoodBye('budi');
 
   person1.sayHello('Abdul');
   person1.hello();
